@@ -8,7 +8,7 @@ CREATE TABLE employees (
     salary INT
 );
 
-INSERT INTO employees (name, surname, department, salary) VALUES ('Zaur', 'Tregulov', 'IT', 120000);
+INSERT INTO employees (name, surname, department, salary) VALUES ('Nikita', 'Nesterenko', 'IT', 120000);
 INSERT INTO employees (name, surname, department, salary) VALUES ('Oleg', 'Ivanov', 'Sales', 95000);
 INSERT INTO employees (name, surname, department, salary) VALUES ('Nina', 'Sidorova', 'HR', 66000);
 
