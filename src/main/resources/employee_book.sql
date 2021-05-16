@@ -11,4 +11,3 @@ CREATE TABLE employees (
 INSERT INTO employees (name, surname, department, salary) VALUES ('Nikita', 'Nesterenko', 'IT', 120000);
 INSERT INTO employees (name, surname, department, salary) VALUES ('Oleg', 'Ivanov', 'Sales', 95000);
 INSERT INTO employees (name, surname, department, salary) VALUES ('Nina', 'Sidorova', 'HR', 66000);
-
