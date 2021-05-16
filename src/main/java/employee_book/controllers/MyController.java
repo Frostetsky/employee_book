@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
 
 @Controller
@@ -20,8 +21,10 @@ public class MyController {
 
     @RequestMapping("/")
     public String showAllEmployees(Model model) {
+
         List<Employee> employees = employeeService.getAllEmployee();
         model.addAttribute("employees", employees);
+
         return "all-employees";
     }
 
@@ -49,6 +52,14 @@ public class MyController {
         model.addAttribute("employee", employee);
 
         return "employee-info";
+    }
+
+    @RequestMapping("/deleteEmployee")
+    public String deleteEmployeeByID(@RequestParam("empID") Integer id) {
+
+        employeeService.deleteEmployeeByID(id);
+
+        return "redirect:/";
     }
 }
 

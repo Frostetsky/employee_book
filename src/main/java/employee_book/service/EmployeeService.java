@@ -10,5 +10,7 @@ public interface EmployeeService {
     void saveEmployee(Employee employee);
 
     public Employee getEmployee(Integer id);
+
+    public void deleteEmployeeByID(Integer id);
 }
 
