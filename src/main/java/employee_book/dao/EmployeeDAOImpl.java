@@ -5,7 +5,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -26,6 +25,13 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     @Override
     public void saveEmployee(Employee employee) {
         Session session = sessionFactory.getCurrentSession();
-        session.save(employee);
+        session.saveOrUpdate(employee);
+    }
+
+    @Override
+    public Employee getEmployee(Integer id) {
+        Session session = sessionFactory.getCurrentSession();
+        Employee result = session.get(Employee.class, id);
+        return result;
     }
 }
